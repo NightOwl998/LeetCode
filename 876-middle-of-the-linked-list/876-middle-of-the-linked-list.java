@@ -12,22 +12,20 @@ class Solution {
     public ListNode middleNode(ListNode head) {
         ListNode node=head;
         int length=0;
-        
+        //get the length of the LinkedList
         while(node!=null)
         {
             node=node.next;
             length++;
         }
+        // calculate the index of the middle element 
+        int middle=length/2+1;       
+        int counter=1;
         
-        int compt=length/2+1;
-       // System.out.println("the legth is "+length+"thr compt is"+ compt);
-        int h=1;
-        while(h!=compt)
+        while(counter!=middle)
         {  
-            h++;
-            head=head.next;
-            
-            
+            counter++;
+            head=head.next;         
             
         }
         return head;
