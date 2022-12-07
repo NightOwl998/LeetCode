@@ -25,7 +25,7 @@ class Solution {
         if(root==null) return sum;
         
          if(root.val<=high && root.val>=low) 
-         { //System.out.println("the value is"+root.val);
+         { 
              sum=sum+root.val;
          }
         
