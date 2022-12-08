@@ -9,12 +9,11 @@
  * }
  */
 class Solution {
-    public ListNode oddEvenList(ListNode head) {
+    public ListNode oddEvenList(ListNode head) {       
         
-        
-        if(head==null) return null;
-        if(head.next==null) return head;
-        ListNode temp_odd=new ListNode(head.val,null);
+        if(head==null) return null; //Empty liste
+        if(head.next==null) return head; // a liste that only contains one element.
+        ListNode temp_odd=new ListNode(head.val,null); //if we got here it means we have at least two elements in the list and so the odd list and the even list contains at least one element and they are not empty. 
         ListNode temp_even=new ListNode((head.next).val,null);
         ListNode list_odd=temp_odd;
         ListNode list_even=temp_even;
@@ -28,12 +27,12 @@ class Solution {
                 ListNode el=new ListNode(copy_.val,null);
                 temp_odd.next=el;
                 temp_odd=temp_odd.next;
-                //System.out.println("the odd list is "+el.val);
+               
             }
             else
             { 
                 ListNode el=new ListNode(copy_.val,null);
-                //System.out.println("the even  list is "+el.val);
+                
                 temp_even.next=el;
                 temp_even=temp_even.next;
             }
@@ -42,7 +41,7 @@ class Solution {
             copy_=copy_.next;
             counter++;
         }
-         //System.out.println("the last element on the odd "+temp_odd.val);
+        
         
         temp_odd.next=list_even;
         return list_odd;
