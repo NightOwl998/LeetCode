@@ -9,6 +9,6 @@ func findTheDifference(s string, t string) byte {
         }
         
     }
-    fmt.Println("string %s",s)
+    
     return res
 }
